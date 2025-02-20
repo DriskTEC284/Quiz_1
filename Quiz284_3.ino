@@ -19,7 +19,7 @@ void setup(){
   pinMode(buttonPinRED, INPUT_PULLUP); // Assigning pin inputs with internal pullup
   pinMode(buttonPinGREEN, INPUT_PULLUP);      
   pinMode(buttonPinBLUE, INPUT_PULLUP);
-  void startup();
+  startup();
 } 
 void loop(){
     // the start of chaos. multiple if's to determine led color output
@@ -93,41 +93,34 @@ switch (push) {
     digitalWrite(blue,  LOW);
   default:
     break;
-
-    /* // attempted to call a method to flas the leds at start up, but it was angry at me
-    void startup()
-    pinMode(red, OUTPUT); // Assigning pin outputs
-    pinMode(green, OUTPUT); 
-    pinMode(blue,  OUTPUT);
-    
-    digitalWrite(red, HIGH);
-    delay (250);
-    digitalWrite(red, LOW);
-    delay (250);
-    digitalWrite(red, HIGH);
-    delay (250);    
-    digitalWrite(green, HIGH);
-    delay (250);
-    digitalWrite(green, LOW);
-    delay (250);
-    digitalWrite(green, HIGH);
-    delay (250);
-    digitalWrite(blue, HIGH);
-    delay (250); 
-    digitalWrite(blue, LOW);
-    delay (250);
-    digitalWrite(blue, HIGH);
-    */
+ 
     
   }
 
-
-
-
-
-
-
-
-
-  
+    
 }
+
+ // attempted to call a method to flash the leds at start up, but it was angry at me
+    void startup() {
+         
+      digitalWrite(red, HIGH);
+      delay (250);
+      digitalWrite(red, LOW);
+      delay (250);
+      digitalWrite(red, HIGH);
+      delay (250); 
+      digitalWrite(red, LOW);   
+      digitalWrite(green, HIGH);
+      delay (250);
+      digitalWrite(green, LOW);
+      delay (250);
+      digitalWrite(green, HIGH);
+      delay (250);
+      digitalWrite(green, LOW);
+      digitalWrite(blue, HIGH);
+      delay (250); 
+      digitalWrite(blue, LOW);
+      delay (250);
+      digitalWrite(blue, HIGH);
+      digitalWrite(blue, LOW);
+    }
